@@ -44,6 +44,18 @@ public class StudentRestController {
 	}
 	
 	
+	@GetMapping("/fetchByStudentName/{studentName}")
+
+	public ResponseEntity<Optional<Student>> fetchByStudentName(@PathVariable int studentName) {
+		System.out.println(studentName);
+		Optional<Student> obj = service.findByStudentId(studentName);
+		System.out.println(obj);
+		return new ResponseEntity<Optional<Student>>(obj, HttpStatus.OK);
+	}
+	
+	
+	
+	
 	
 
 	@PutMapping("/updateStudentId")
