@@ -28,7 +28,8 @@ public class StudentService {
 	
 	
 	public Optional<Student> findByStudentName(int studentName) {
-		return repo.findByStudentName(studentName);
+		Optional<Student> s = repo.findByStudentName(studentName);
+		return s;
 	}
 	
 	
