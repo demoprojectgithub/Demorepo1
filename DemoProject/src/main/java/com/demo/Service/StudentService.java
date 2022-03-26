@@ -27,9 +27,13 @@ public class StudentService {
 	}
 	
 	
+	public Optional<Student> findByStudentName(int studentName) {
+		return repo.findByStudentName(studentName);
+	}
 	
-
-	public void updateByStudentId(Student s) {
+	
+	
+    public void updateByStudentId(Student s) {
 		repo.save(s);
 	}
 
